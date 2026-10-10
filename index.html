@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="一部约一分半钟的上海城市介绍短片：江海、尺度、两岸、高度、港口与街巷。">
+  <meta name="theme-color" content="#08090d">
+  <title>上海 — 城市介绍</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%2308090d' width='32' height='32'/%3E%3Cpath d='M6 24 V8 h2.2 l7.8 11.2 V8 H18 v16 h-2.2 L8 12.6 V24z' fill='%23e4cc9a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="fonts/noto-serif-sc-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/noto-serif-sc-400.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <p class="sr-only" id="about">一部关于上海的城市介绍短片。播放后可用空格键暂停，用左右方向键切换章节。</p>
+  <div class="stage" id="stage">
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="topbar" aria-hidden="true">
+      <span>上海</span>
+      <span lang="en">CITY FILM</span>
+    </header>
+
+    <nav class="rail" id="rail" aria-label="章节"></nav>
+
+    <section class="scene scene-title is-on" id="scene-title" aria-labelledby="title-name">
+      <div class="lockup">
+        <p class="kicker">城市介绍影片</p>
+        <h1 id="title-name">上海</h1>
+        <div class="rule" aria-hidden="true"></div>
+        <p class="en" lang="en">SHANGHAI</p>
+      </div>
+    </section>
+
+    <section class="scene scene-estuary" id="scene-estuary" aria-labelledby="estuary-title" hidden>
+      <div class="split">
+        <svg class="delta" viewBox="0 0 800 680" role="img" aria-label="长江入海口示意图，标出崇明岛和市区的大致位置">
+          <rect width="800" height="680" fill="#10262c"></rect>
+          <path class="land" fill-rule="evenodd" d="M0 0 H800 V680 H0 Z M28 348 C150 336 246 292 352 262 C470 228 600 156 800 86 L800 512 C600 456 470 404 352 438 C246 466 150 404 28 418 Z"></path>
+          <path class="coast" pathLength="1" d="M28 418 C150 404 246 466 352 438 C470 404 600 456 800 512"></path>
+          <ellipse class="isle" cx="548" cy="268" rx="86" ry="24"></ellipse>
+          <ellipse class="isle" cx="628" cy="328" rx="38" ry="13"></ellipse>
+          <ellipse class="isle" cx="688" cy="372" rx="26" ry="10"></ellipse>
+          <text class="map-label" x="548" y="272">崇明</text>
+          <text class="map-label quiet" x="628" y="332">长兴</text>
+          <text class="map-label quiet" x="688" y="376">横沙</text>
+          <text class="map-label water" x="730" y="210">东海</text>
+          <circle class="city-pulse" cx="318" cy="492" r="14"></circle>
+          <circle class="city-dot" cx="318" cy="492" r="5"></circle>
+          <text class="map-label" x="318" y="522">市区</text>
+        </svg>
+        <div class="copy">
+          <p class="kicker">01 / 江海</p>
+          <h2 id="estuary-title">长江在这里入海</h2>
+          <p class="lead">向东是太平洋，身后是长江三角洲。</p>
+          <p class="coords"><span>北纬 31°14′</span><span>东经 121°28′</span></p>
+          <p class="fine">市区为约略位置，海岸线是示意图。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene scene-scale" id="scene-scale" aria-labelledby="scale-title" hidden>
+      <p class="kicker">02 / 尺度</p>
+      <h2 id="scale-title" class="sr-only">城市尺度</h2>
+      <div class="stats">
+        <article>
+          <p class="num" aria-hidden="true"><span data-count="2480.26" data-decimals="2" data-delay="200">0</span><i>万</i></p>
+          <h3>常住人口</h3>
+          <p>2024 年末</p>
+          <p class="sr-only">2024 年末，全市常住人口 2480.26 万人。</p>
+        </article>
+        <article>
+          <p class="num" aria-hidden="true"><span data-count="6340.5" data-decimals="1" data-delay="360">0</span><i>km²</i></p>
+          <h3>行政区划面积</h3>
+          <p>2023 年底</p>
+          <p class="sr-only">行政区划面积 6340.5 平方公里，口径为 2023 年底。</p>
+        </article>
+        <article>
+          <p class="num" aria-hidden="true"><span data-count="896" data-decimals="0" data-delay="520">0</span><i>公里</i></p>
+          <h3>轨道交通</h3>
+          <p>21 条线路，含市域线<br>517 座车站 · 2024 年末</p>
+          <p class="sr-only">2024 年末，轨道交通运营线路 21 条，含市域线 1 条，运营里程 896 公里，车站 517 座。</p>
+        </article>
+      </div>
+      <p class="source">人口与轨道交通见上海市统计局《2024 年上海市国民经济和社会发展统计公报》。面积见《上海概览》，2023 年底行政区划口径。</p>
+    </section>
+
+    <section class="scene scene-shores" id="scene-shores" aria-labelledby="shores-title" hidden>
+      <div class="copy">
+        <p class="kicker">03 / 两岸</p>
+        <h2 id="shores-title">外滩与陆家嘴<br>隔着黄浦江相望</h2>
+        <p class="lead">一边是砖石和时钟，<br>一边是玻璃和天际线。</p>
+        <p class="fine">天际线为示意图，高度没有按真实比例。</p>
+      </div>
+      <svg class="skyline" id="skyline" viewBox="0 0 1920 500" role="img" aria-label="外滩与陆家嘴隔江相望的示意图"></svg>
+    </section>
+
+    <section class="scene scene-height" id="scene-height" aria-labelledby="height-title" hidden>
+      <div class="height-grid">
+        <div class="copy">
+          <p class="kicker">04 / 高度</p>
+          <p class="num" aria-hidden="true"><span data-count="632" data-decimals="0" data-delay="240">0</span><i>米</i></p>
+          <h2 id="height-title">上海中心大厦</h2>
+          <p class="lead">建筑总高度。旁边两道刻度，是环球金融中心和金茂大厦。</p>
+          <p class="sr-only">上海中心大厦建筑总高度 632 米。上海环球金融中心 492 米，金茂大厦 420.5 米。</p>
+        </div>
+        <div class="tower-block" aria-hidden="true">
+          <div class="ticks">
+            <p style="--h: 100%"><b>632</b> 上海中心</p>
+            <p style="--h: 77.8%"><b>492</b> 环球金融中心</p>
+            <p style="--h: 66.5%"><b>420.5</b> 金茂大厦</p>
+          </div>
+          <div class="shaft"><div class="shaft-fill"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene scene-port" id="scene-port" aria-labelledby="port-title" hidden>
+      <div class="copy center-copy">
+        <p class="kicker">05 / 港口</p>
+        <p class="num" aria-hidden="true"><span data-count="5150.63" data-decimals="2" data-delay="200">0</span><i>万</i></p>
+        <h2 id="port-title">标准箱</h2>
+        <p class="lead">2024 年上海港集装箱吞吐量。航线连着长江口和洋山深水港。</p>
+        <p class="sr-only">2024 年，上海港集装箱吞吐量 5150.63 万国际标准箱。</p>
+      </div>
+      <div class="harbor" id="harbor" aria-hidden="true"></div>
+    </section>
+
+    <section class="scene scene-streets" id="scene-streets" aria-labelledby="streets-title" hidden>
+      <p class="kicker">06 / 街巷</p>
+      <h2 id="streets-title" class="sr-only">街巷</h2>
+      <div class="beats">
+        <div class="beat" data-beat="0">
+          <h3>梧桐</h3>
+          <p class="lead">夏天把整条马路收进阴影里。</p>
+        </div>
+        <div class="beat" data-beat="1">
+          <h3>弄堂</h3>
+          <p class="lead">门牌后面，是这座城市的日常尺度。</p>
+        </div>
+        <div class="beat" data-beat="2">
+          <h3>小笼</h3>
+          <p class="lead">褶子捏得细，汤还是烫的。</p>
+        </div>
+      </div>
+      <svg class="tree" viewBox="0 0 220 340" aria-hidden="true">
+        <path d="M112 330 C108 250 96 210 112 160" fill="none" stroke="#cbb892" stroke-width="2"></path>
+        <path d="M112 230 C80 220 70 200 86 176" fill="none" stroke="#cbb892" stroke-width="1.4"></path>
+        <path d="M112 200 C146 190 160 170 148 148" fill="none" stroke="#cbb892" stroke-width="1.4"></path>
+        <circle cx="78" cy="132" r="48" fill="#17312e"></circle>
+        <circle cx="132" cy="112" r="56" fill="#142a28"></circle>
+        <circle cx="104" cy="86" r="42" fill="#1b3834"></circle>
+      </svg>
+    </section>
+
+    <section class="scene scene-arrive" id="scene-arrive" aria-labelledby="arrive-title" hidden>
+      <div class="lockup">
+        <p class="kicker">07 / 抵达</p>
+        <h2 id="arrive-title">欢迎来到上海</h2>
+        <p class="en" lang="en">WELCOME TO SHANGHAI</p>
+        <p class="lead">江仍在流，灯还亮着。</p>
+      </div>
+      <svg class="echo" viewBox="0 0 1200 90" aria-hidden="true" preserveAspectRatio="none">
+        <path pathLength="1" d="M0 78 H70 V46 H96 V78 H150 V22 H176 V78 H250 V52 H310 V78 H390 V12 H412 V78 H500 V40 H560 V78 H650 V58 H730 V78 H820 V18 H846 V78 H930 V44 H1010 V78 H1200"></path>
+      </svg>
+    </section>
+
+    <div class="finder" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <div class="cta" id="cta">
+      <button class="play" id="play" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 6.8v10.4L18 12z"></path></svg>
+        <span>播放</span>
+      </button>
+      <p class="hint" id="hint">片长</p>
+    </div>
+
+    <button class="replay" id="replay" type="button" hidden>再看一次</button>
+
+    <div class="controls">
+      <button class="toggle" id="toggle" type="button" hidden>暂停</button>
+      <p class="now" id="now" aria-live="polite"></p>
+      <p class="clock" id="clock">00:00 / 00:00</p>
+    </div>
+    <div class="scrub" id="scrub" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="播放进度">
+      <i></i>
+      <b id="fill"></b>
+    </div>
+  </div>
+  <noscript><p class="noscript">请开启 JavaScript 以播放这部短片。</p></noscript>
+  <script src="film.js"></script>
+</body>
+</html>
